@@ -1,52 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 2: Course Tabs</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="container">
-    <p class="label">Short course</p>
-    <h1>Introduction to Web Design</h1>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Course Tabs — Interactive JavaScript Lesson</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>html<html lang="en"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Course Tabs — Interactive JavaScript Lesson</title>
 
-    <div class="tabs">
-      <div class="tab-list">
-        <button class="tab active" type="button" data-tab="overview">Overview</button>
-        <button class="tab" type="button" data-tab="schedule">Schedule</button>
-        <button class="tab" type="button" data-tab="reviews">Reviews</button>
-        <button class="tab" type="button" data-tab="fees">Fees</button>
-      </div>
+<header><strong>SKILLS CHALLENGE · WEB TECHNOLOGIES</strong><h1>JavaScript Course Tabs</h1><p>Learn the exact code you shared — one step at a time. Explore, practise, and test yourself. Works offline.</p></header><main>
+<section><h2>🎯 Learning goals</h2><p>Use <code>querySelectorAll</code>, <code>forEach</code>, <code>addEventListener</code>, <code>classList</code> and <code>index</code> to switch between four tabs and panels.</p></section>
+<section><h2>1. Try the result</h2><p>Click each tab and watch the selected content change.</p><div id="demo"><div class="tabs"><button class="tab active">Overview</button><button class="tab">Schedule</button><button class="tab">Reviews</button><button class="tab">Fees</button></div><div class="panel active"><h3>Overview</h3>Learn HTML, CSS and JavaScript through practical projects.</div><div class="panel"><h3>Schedule</h3>Monday: HTML · Tuesday: CSS · Wednesday: JavaScript.</div><div class="panel"><h3>Reviews</h3>Students enjoy hands-on website building.</div><div class="panel"><h3>Fees</h3>Course price: AED 250.</div></div><p class="feedback" id="demo-status">Selected: Overview · index 0</p></section>
+<section><h2>2. HTML + CSS connection</h2><p>Every tab matches the panel at the same position. The first tab and panel start with the <code>active</code> class.</p><pre>&lt;button class="tab active"&gt;Overview&lt;/button&gt;
+&lt;button class="tab"&gt;Schedule&lt;/button&gt;
+&lt;div class="panel active"&gt;Overview content&lt;/div&gt;
+&lt;div class="panel"&gt;Schedule content&lt;/div&gt;</pre><pre>.panel { display: none; }
+.panel.active { display: block; }
+.tab.active { background: royalblue; color: white; }</pre></section>
+<section><h2>3. Understand each step</h2><p class="muted">Click “Explain” to reveal the purpose of each code statement.</p><div id="steps"></div></section>
+<section><h2>4. Complete JavaScript solution</h2><p>Same approach as your code, without using <code>dataset</code>.</p><pre id="solution"></pre><p class="feedback"><b>Note:</b> This solution handles clicks and active states. Changing the browser title and arrow-key navigation are additional Task 2 requirements, not implemented in the supplied code.</p></section>
+<section><h2>5. Write the JavaScript yourself</h2><p>Complete the missing logic, then check which important concepts your answer contains.</p><textarea id="editor" spellcheck="false">const tabs = document.querySelectorAll(".tab");
+const panels = document.querySelectorAll(".panel");
 
-      <section class="panel active" id="overview">
-        <h2>Overview</h2>
-        <p>Learn how websites are planned and designed. You will build three small pages with HTML and CSS and present your final project on the last day.</p>
-      </section>
+// Loop through tabs with tab and index
 
-      <section class="panel" id="schedule">
-        <h2>Schedule</h2>
-        <ul>
-          <li>Week 1: Planning and wireframes</li>
-          <li>Week 2: HTML structure</li>
-          <li>Week 3: CSS layout with Flexbox and Grid</li>
-          <li>Week 4: Final project</li>
-        </ul>
-      </section>
+// Listen for click
 
-      <section class="panel" id="reviews">
-        <h2>Reviews</h2>
-        <blockquote>“Clear lessons and lots of practice. I built my first website in four weeks.” — Mariam</blockquote>
-        <blockquote>“The Grid lesson finally made layout make sense.” — Omar</blockquote>
-      </section>
+// Remove active from all tabs and panels
 
-      <section class="panel" id="fees">
-        <h2>Fees</h2>
-        <p>The course costs AED 950. Students get a 20% discount.</p>
-      </section>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+// Add active to clicked tab and panels[index]
+</textarea><button class="action" id="check">Check my code</button><button class="action outline" id="answer">Show model answer</button><button class="action outline" id="reset">Reset</button><div class="feedback" id="check-output">Write your solution, then click Check my code.</div></section>
+<section><h2>6. Test your understanding</h2><div id="questions"></div><button class="action" id="mark">Check answers</button><button class="action outline" id="retry">Try again</button><div class="feedback" id="score">Answer all five questions.</div></section>
+<section><h2>7. Extra challenges</h2><p><b>Browser title:</b> After activating a tab, add <code>document.title = "Introduction to Web Design – " + tab.textContent.trim();</code></p><p><b>Keyboard:</b> Add Left/Right arrow navigation and wrap from the last tab to the first. Hint: use <code>keydown</code>, calculate the next index, then call <code>tabs[nextIndex].click()</code>.</p></section></main><footer>Interactive JavaScript Academy · Course Tabs · Skills Challenge</footer>
+</html></body></html>
