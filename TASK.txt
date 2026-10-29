@@ -1,0 +1,44 @@
+TASK 2: COURSE TABS
+===================
+Level: Easy        Suggested time: 25 minutes
+Skills: data attributes (dataset), classList, getElementById, keyboard events
+
+The HTML and CSS are finished. Write your code in script.js only.
+Do not change index.html or style.css.
+
+
+WHAT TO BUILD
+-------------
+Four tabs. Clicking a tab shows its panel and hides the others.
+
+
+REQUIREMENTS
+------------
+[ ] 1. Clicking a tab gives it the class "active" and removes "active" from
+       the other tabs.
+[ ] 2. Clicking a tab shows its panel: the panel with the same id as the
+       tab's data-tab value gets the class "active". All other panels lose
+       "active".
+[ ] 3. When the page loads, the Overview tab and panel are active (the HTML
+       already does this; make sure your code does not break it).
+[ ] 4. The page title in the browser tab changes to
+       "Introduction to Web Design – Schedule" (or Overview, Reviews, Fees)
+       to match the selected tab. Use document.title.
+
+
+HINTS
+-----
+- Each tab has data-tab="overview" (or schedule, reviews, fees).
+  In JavaScript you read it with tab.dataset.tab.
+- document.getElementById(tab.dataset.tab) finds the matching panel.
+- First remove "active" from everything, then add it to the clicked tab and
+  its panel. This is easier than working out which one was active before.
+- The text of the clicked tab is tab.textContent.
+
+
+EXTRA CHALLENGE
+---------------
+- When a tab has focus, the Right Arrow key moves to and selects the next
+  tab and the Left Arrow key selects the previous one. At the ends, wrap
+  around (Right on "Fees" goes to "Overview").
+  Use a keydown event and event.key ('ArrowRight' / 'ArrowLeft').

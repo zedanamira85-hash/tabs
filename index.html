@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2: Course Tabs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="label">Short course</p>
+    <h1>Introduction to Web Design</h1>
+
+    <div class="tabs">
+      <div class="tab-list">
+        <button class="tab active" type="button" data-tab="overview">Overview</button>
+        <button class="tab" type="button" data-tab="schedule">Schedule</button>
+        <button class="tab" type="button" data-tab="reviews">Reviews</button>
+        <button class="tab" type="button" data-tab="fees">Fees</button>
+      </div>
+
+      <section class="panel active" id="overview">
+        <h2>Overview</h2>
+        <p>Learn how websites are planned and designed. You will build three small pages with HTML and CSS and present your final project on the last day.</p>
+      </section>
+
+      <section class="panel" id="schedule">
+        <h2>Schedule</h2>
+        <ul>
+          <li>Week 1: Planning and wireframes</li>
+          <li>Week 2: HTML structure</li>
+          <li>Week 3: CSS layout with Flexbox and Grid</li>
+          <li>Week 4: Final project</li>
+        </ul>
+      </section>
+
+      <section class="panel" id="reviews">
+        <h2>Reviews</h2>
+        <blockquote>“Clear lessons and lots of practice. I built my first website in four weeks.” — Mariam</blockquote>
+        <blockquote>“The Grid lesson finally made layout make sense.” — Omar</blockquote>
+      </section>
+
+      <section class="panel" id="fees">
+        <h2>Fees</h2>
+        <p>The course costs AED 950. Students get a 20% discount.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

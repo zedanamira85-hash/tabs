@@ -1,0 +1,45 @@
+/* Task 2: Course Tabs. The styles are done; you only need to write JavaScript. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #F4F6F8;
+  color: #1B2430;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+
+.label { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0B6E99; }
+
+h1 { margin: 4px 0 24px; font-size: 32px; }
+
+.tabs { background: #FFFFFF; border: 1px solid #D8DEE6; border-radius: 4px; }
+
+.tab-list { display: flex; flex-wrap: wrap; border-bottom: 1px solid #D8DEE6; }
+
+.tab {
+  padding: 14px 20px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: #5B6675;
+  cursor: pointer;
+}
+.tab:hover { color: #1B2430; }
+
+/* The selected tab */
+.tab.active { color: #0B6E99; border-bottom-color: #0B6E99; }
+
+/* Panels are hidden until they have the class "active" */
+.panel { display: none; padding: 24px; }
+.panel.active { display: block; }
+
+.panel h2 { margin: 0 0 12px; font-size: 22px; }
+.panel p, .panel ul { margin: 0; }
+
+blockquote { margin: 0 0 12px; padding-left: 16px; border-left: 3px solid #0B6E99; color: #5B6675; }
